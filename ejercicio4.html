@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Función que verifica si un número es primo
+function esPrimo(numero) {
+    if (numero <= 1) {
+        return false;
+    }
+
+    // Solo recorre hasta la raíz cuadrada del número
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// Función que lista los números primos hasta un límite
+function listarPrimos(limite) {
+    console.log("Números primos entre 2 y " + limite + ":");
+
+    for (let i = 2; i <= limite; i++) {
+        if (esPrimo(i)) {
+            console.log(i);
+        }
+    }
+}
+
+// Ejemplo de uso
+listarPrimos(100);
+    </script>
+</body>
+</html>

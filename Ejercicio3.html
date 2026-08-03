@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Función para invertir un texto
+function invertirTexto(texto) {
+    return texto.split("").reverse().join("");
+}
+
+// Función para verificar si un texto es un palíndromo
+function esPalindromo(texto) {
+    // Normalizar el texto: minúsculas y sin espacios
+    let textoNormalizado = texto.toLowerCase().replace(/\s/g, "");
+
+    // Comparar el texto normalizado con su versión invertida
+    return textoNormalizado === invertirTexto(textoNormalizado);
+}
+
+// Pruebas
+console.log(invertirTexto("Hola mundo")); // aloH
+
+console.log(esPalindromo("reconocer"));          // true
+console.log(esPalindromo("Anita lava la tina")); // true
+console.log(esPalindromo("Hola mundo"));         // false
+console.log(esPalindromo(""));                   // true
+console.log(esPalindromo("a"));                  // true
+
+    </script>
+    
+</body>
+</html>

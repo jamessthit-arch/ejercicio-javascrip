@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de los dígitos</title>
+</head>
+<body>
+
+    <h2>Suma de los dígitos de un número</h2>
+
+    <script>
+        function sumarDigitos(numero) {
+            let suma = 0;
+
+            while (numero > 0) {
+                suma = suma + (numero % 10);
+                numero = Math.floor(numero / 10);
+            }
+
+            return suma;
+        }
+
+        let numero = 1234;
+        let resultado = sumarDigitos(numero);
+
+        document.write("El número es: " + numero + "<br>");
+        document.write("La suma de sus dígitos es: " + resultado);
+    </script>
+
+</body>
+</html>
