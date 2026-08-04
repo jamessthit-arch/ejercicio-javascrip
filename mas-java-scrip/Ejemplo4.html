@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function contarOcurrencias(arreglo, valorBuscado) {
+    let contador = 0;
+
+    // Recorre el arreglo con un for...of
+    for (let elemento of arreglo) {
+
+        // Compara el elemento con el valor buscado
+        if (elemento === valorBuscado) {
+
+            // Si son iguales, aumenta el contador
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+// Casos de prueba
+console.log(contarOcurrencias([1, 2, 3, 2, 2, 5], 2)); // 3
+console.log(contarOcurrencias(["a", "b", "a", "c"], "a")); // 2
+console.log(contarOcurrencias([1, 2, 3], 9)); // 0
+        </script>
+    </body>
+</html>

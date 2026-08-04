@@ -1,0 +1,51 @@
+<!DOCTYPE script>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Contar vocales
+        </title>
+    </head>
+<body>
+<script>
+    function fibonacci(cantidad) {
+    const serie = [];
+
+    // Casos especiales
+    if (cantidad <= 0) {
+        return [];
+    }
+
+    if (cantidad === 1) {
+        return [0];
+    }
+
+    let anterior = 0;
+    let actual = 1;
+
+    // Agrega el primer término
+    serie.push(anterior);
+
+    // Recorre desde el segundo término
+    for (let i = 1; i < cantidad; i++) {
+
+        // Agrega el término actual
+        serie.push(actual);
+
+        // Calcula el siguiente término
+        let siguiente = anterior + actual;
+
+        // Actualiza los valores
+        anterior = actual;
+        actual = siguiente;
+    }
+
+    return serie;
+}
+
+// Casos de prueba
+console.log(fibonacci(1)); // [0]
+console.log(fibonacci(5)); // [0, 1, 1, 2, 3]
+    </script>
+</body>
+</html>

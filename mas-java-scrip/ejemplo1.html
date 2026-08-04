@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function contarVocales(texto) {
+
+    let contador = 0;
+
+    
+    for (let i = 0; i < texto.length; i++) {
+
+        
+        let caracter = texto[i].toLowerCase();
+
+        
+        if (
+            caracter == "a" ||
+            caracter == "e" ||
+            caracter == "i" ||
+            caracter == "o" ||
+            caracter == "u"
+        ) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+
+console.log(contarVocales("JavaScript"));   // 3
+console.log(contarVocales("Programacion")); // 5
+console.log(contarVocales("xyz"));          // 0
+    </script>
+</body>
+</html>

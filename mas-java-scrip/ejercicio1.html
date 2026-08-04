@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 - Contar Vocales</title>
+</head>
+<body>
+
+<script>
+function contarVocales(texto) {
+    let contador = 0;
+
+    for (let i = 0; i < texto.length; i++) {
+        let caracter = texto[i].toLowerCase();
+
+        if (
+            caracter === "a" ||
+            caracter === "e" ||
+            caracter === "i" ||
+            caracter === "o" ||
+            caracter === "u"
+        ) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+// Casos de prueba
+console.log(contarVocales("enanohermoso"));   // 3
+console.log(contarVocales("solo fri fai")); // 5
+console.log(contarVocales("minecraft"));          // 0
+</script>
+
+</body>
+</html>

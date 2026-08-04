@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function decimalABinario(numero) {
+            if (numero === 0) {
+                return "0";
+    
+    }
+
+    let binario = "";
+
+    while (numero > 0) {
+
+        
+        let residuo = numero % 2;
+
+        binario = residuo + binario;
+
+        numero = Math.floor(numero / 2);
+    }
+
+    return binario;
+}
+
+
+let numero = 25;
+console.log("Número decimal:", numero);
+console.log("Número binario:", decimalABinario(numero));
+    </script>
+</body>
+</html>
